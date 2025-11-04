@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- estilos -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <title>CM Aalquileres</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
+      <div class="container-fluid"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+          aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse d-lg-flex mt-2" id="navbarsExample11"> <a
+            class="navbar-brand col-lg-3 me-0" href="../index.html"> <img src="../assets/logo.chico.png"
+              alt="logo" /></a>
+          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+            <li class="nav-item"> <a class="nav-link " aria-current="page" href="../index.html">Inicio</a></li>
+            <li class="nav-item"> <a class="nav-link active" href="./alquileres.html">Alquileres</a></li>
+            <li class="nav-item"> <a class="nav-link" href="./contacto.html">Contacto</a></li>
+            <li class="nav-item"> <a class="nav-link" href="./preguntas-precuentes.html">Preguntas
+                frecuentes</a></li>
+            <li class="nav-item"> <a class="nav-link" href="./sobre-nosotrtos.html">Sobres
+                nosotros</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-alquileres">
+    <!-- Sección 1: Banner -->
+    <section class="hero-alquileres text-white d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-12 col-lg-7">
+            <h1 class="display-5 fw-bold mb-3">Encontrá tu próximo hogar en José C. Paz</h1>
+            <p class="lead mb-0">
+              Tres departamentos en PH con patio compartido. Opciones prácticas, cómodas y bien ubicadas para distintos
+              estilos de vida.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Sección 2: Cards de alquileres -->
+    <section class="py-5">
+      <div class="container">
+        <header class="mb-4 text-center">
+          <h2 class="h3 mb-2">Disponibles</h2>
+          <p class="text-muted mb-0">Elegí el que mejor se adapte a tus necesidades.</p>
+        </header>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <article class="card card-alquiler h-100">
+              <img class="card-img-top" src="../assets/departamento-1/PresentacionDepto1.jpg"
+                alt="Cocina y comedor del Departamento 1">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Departamento 1</h3>
+                <p class="card-text small text-muted mb-4">
+                  2 ambientes con lavadero, cocina comedor integrada y baño completo. Luminoso y funcional.
+                </p>
+                <a href="#detalle-depto-1" class="btn btn-dark mt-auto btn-ver-mas" role="button">Ver más</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <article class="card card-alquiler h-100">
+              <img class="card-img-top" src="../assets/departamento-2/PresentacionDepto2.jpg"
+                alt="Vista del dormitorio y cocina del Departamento 2">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Departamento 2</h3>
+                <p class="card-text small text-muted mb-4">
+                  2 ambientes compactos, cocina funcional, habitación privada y baño completo. Eficiente y cómodo.
+                </p>
+                <a href="#detalle-depto-2" class="btn btn-dark mt-auto btn-ver-mas" role="button">Ver más</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <article class="card card-alquiler h-100">
+              <img class="card-img-top" src="../assets/departamento-3/PresentacionDepto3.jpg"
+                alt="Comedor hacia cocina y baño del Departamento 3">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5 card-title">Departamento 3</h3>
+                <p class="card-text small text-muted mb-4">
+                  3 ambientes: cocina comedor amplia, dos habitaciones y baño completo. Espacio y privacidad.
+                </p>
+                <a href="#detalle-depto-3" class="btn btn-dark mt-auto btn-ver-mas" role="button">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Sección 3: Comparativa + CTA -->
+        <section class="py-5 bg-light">
+          <div class="container">
+            <header class="mb-4 text-center">
+              <h2 class="h4 mb-2">Compará de un vistazo</h2>
+              <p class="text-muted mb-0">Características clave de cada unidad para ayudarte a decidir.</p>
+            </header>
+
+            <!-- Versión desktop/tablet (grid de Bootstrap) -->
+            <div class="comparison-grid d-none d-md-block shadow-sm rounded-3 overflow-hidden bg-white">
+              <!-- Encabezado -->
+              <div class="row g-0 comparison-head text-white">
+                <div class="col-3 py-3 px-3 fw-semibold">Características</div>
+                <div class="col-3 py-3 px-3 text-center fw-semibold">Depto 1</div>
+                <div class="col-3 py-3 px-3 text-center fw-semibold">Depto 2</div>
+                <div class="col-3 py-3 px-3 text-center fw-semibold">Depto 3</div>
+              </div>
+
+              <!-- Filas -->
+              <div class="row g-0 comparison-row">
+                <div class="col-3 py-3 px-3 feature-label">Ambientes</div>
+                <div class="col-3 py-3 px-3 text-center">2</div>
+                <div class="col-3 py-3 px-3 text-center">2 (compactos)</div>
+                <div class="col-3 py-3 px-3 text-center">3</div>
+              </div>
+
+              <div class="row g-0 comparison-row">
+                <div class="col-3 py-3 px-3 feature-label">Cocina/Comedor</div>
+                <div class="col-3 py-3 px-3 text-center">Integrada</div>
+                <div class="col-3 py-3 px-3 text-center">Funcional</div>
+                <div class="col-3 py-3 px-3 text-center">Amplia</div>
+              </div>
+
+              <div class="row g-0 comparison-row">
+                <div class="col-3 py-3 px-3 feature-label">Habitaciones</div>
+                <div class="col-3 py-3 px-3 text-center">1</div>
+                <div class="col-3 py-3 px-3 text-center">1</div>
+                <div class="col-3 py-3 px-3 text-center">2</div>
+              </div>
+
+              <div class="row g-0 comparison-row">
+                <div class="col-3 py-3 px-3 feature-label">Lavadero</div>
+                <div class="col-3 py-3 px-3 text-center">Sí (espacioso)</div>
+                <div class="col-3 py-3 px-3 text-center">Compacto</div>
+                <div class="col-3 py-3 px-3 text-center">Sí</div>
+              </div>
+
+              <div class="row g-0 comparison-row">
+                <div class="col-3 py-3 px-3 feature-label">Ideal para</div>
+                <div class="col-3 py-3 px-3 text-center">Pareja / 1 persona</div>
+                <div class="col-3 py-3 px-3 text-center">1 persona</div>
+                <div class="col-3 py-3 px-3 text-center">Familia / 2+ personas</div>
+              </div>
+            </div>
+
+            <!-- Versión mobile (cards apiladas) -->
+            <div class="d-md-none">
+              <!-- Deptos como listas de características -->
+              <article class="card shadow-sm mb-3">
+                <div class="card-body">
+                  <h3 class="h5 card-title mb-3">Departamento 1</h3>
+                  <ul class="list-unstyled mb-0 small text-muted">
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Ambientes</span><strong>2</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Cocina/Comedor</span><strong>Integrada</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Habitaciones</span><strong>1</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom"><span>Lavadero</span><strong>Sí
+                        (espacioso)</strong></li>
+                    <li class="d-flex justify-content-between py-2"><span>Ideal para</span><strong>Pareja / 1
+                        persona</strong></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="card shadow-sm mb-3">
+                <div class="card-body">
+                  <h3 class="h5 card-title mb-3">Departamento 2</h3>
+                  <ul class="list-unstyled mb-0 small text-muted">
+                    <li class="d-flex justify-content-between py-2 border-bottom"><span>Ambientes</span><strong>2
+                        (compactos)</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Cocina/Comedor</span><strong>Funcional</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Habitaciones</span><strong>1</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Lavadero</span><strong>Compacto</strong></li>
+                    <li class="d-flex justify-content-between py-2"><span>Ideal para</span><strong>1 persona</strong>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="card shadow-sm">
+                <div class="card-body">
+                  <h3 class="h5 card-title mb-3">Departamento 3</h3>
+                  <ul class="list-unstyled mb-0 small text-muted">
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Ambientes</span><strong>3</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Cocina/Comedor</span><strong>Amplia</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Habitaciones</span><strong>2</strong></li>
+                    <li class="d-flex justify-content-between py-2 border-bottom">
+                      <span>Lavadero</span><strong>Sí</strong></li>
+                    <li class="d-flex justify-content-between py-2"><span>Ideal para</span><strong>Familia / 2+
+                        personas</strong></li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="./contacto.html" class="btn btn-lg btn-dark px-4">Consultar disponibilidad</a>
+              <p class="small text-muted mt-2 mb-0">¿Dudas puntuales? Escribinos y te asesoramos en minutos.</p>
+            </div>
+          </div>
+        </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <span>Dererechos reservados por autor</span>
+    <span>Creado por Carolina Gonzalo</span>
+    <div class="contenedor-links">
+      <p>Links a redes</p>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="../assets/icon-instagram.png" alt="Instagram">
+          </a>
+
+        </li>
+        <li>
+          <a href="https://www.Facebook.com" target="_blank">
+            <img src="../assets/icon-facebook.png" alt="Facebook">
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="../assets/icon-email.png" alt="Email">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- script bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

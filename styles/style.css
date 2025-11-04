@@ -1,0 +1,432 @@
+/* fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* header/footer */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* títulos */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/* textos */
+/* fin fuentes */
+
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  color: #111;
+  background: #fafafa;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* fin reset */
+
+
+/* header */
+.navbar-brand img {
+  height: 48px;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+  color: #000 !important;
+}
+
+/* fin header */
+
+
+/* grilla index - tipografías */
+.galeria-grid h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.galeria-grid h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.1rem, 0.9rem + 1vw, 1.5rem);
+  color: #444;
+}
+
+.galeria-grid p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2a2a2a;
+}
+
+/* fin grilla index - tipografías */
+
+
+/* grilla index - layout */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  grid-template-areas:
+    "titulo-index"
+    "subtitulo"
+    "presentacion"
+    "item-grid-contenedor-depto-uno"
+    "item-grid-contenedor-depto-dos"
+    "item-grid-contenedor-depto-tres";
+  align-items: start;
+  padding: 16px;
+}
+
+.titulo-index {
+  grid-area: titulo-index;
+}
+
+.subtitulo {
+  grid-area: subtitulo;
+}
+
+.presentacion {
+  grid-area: presentacion;
+}
+
+.item-grid-contenedor-depto-uno {
+  grid-area: item-grid-contenedor-depto-uno;
+}
+
+.item-grid-contenedor-depto-dos {
+  grid-area: item-grid-contenedor-depto-dos;
+}
+
+.item-grid-contenedor-depto-tres {
+  grid-area: item-grid-contenedor-depto-tres;
+}
+
+.titulo-index,
+.subtitulo,
+.presentacion {
+  padding: 12px 8px;
+}
+
+.presentacion {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .05);
+}
+
+/* fin grilla index - layout */
+
+
+/* cards index */
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-grid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.card-grid h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+}
+
+.card-grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card-grid img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex: 0 0 auto;
+}
+
+.card-grid p {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 60ch;
+}
+
+/* fin cards index */
+
+
+/* hero alquileres */
+.hero-alquileres {
+  position: relative;
+  min-height: 46vh;
+  background: #111 center/cover no-repeat;
+  background-image: url('../assets/banner-alquileres.jpg');
+  padding: clamp(32px, 6vw, 64px) 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-alquileres .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .55) 100%);
+  pointer-events: none;
+}
+
+.hero-alquileres .container,
+.hero-alquileres .row,
+.hero-alquileres .col-12 {
+  position: relative;
+  z-index: 2;
+}
+
+/* fin hero alquileres */
+
+
+/* cards alquileres */
+.card-alquiler {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .08);
+  transition: transform .18s ease, box-shadow .18s ease;
+  background: #fff;
+}
+
+.card-alquiler:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .12);
+}
+
+.card-alquiler .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.btn-ver-mas {
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+/* fin cards alquileres */
+
+
+/* comparativa sin tabla */
+.comparison-head {
+  background: #111;
+  color: #fff;
+}
+
+.comparison-row+.comparison-row {
+  border-top: 1px solid rgba(0, 0, 0, .08);
+}
+
+.comparison-row:nth-child(even) {
+  background: #fafafa;
+}
+
+.feature-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.comparison-grid,
+.comparison-grid * {
+  font-family: "Open Sans", sans-serif;
+}
+
+.comparison-grid .feature-label,
+.comparison-head {
+  font-family: "Poppins", sans-serif;
+}
+
+/* fin comparativa sin tabla */
+
+/* pagina-contacto formulario */
+.titulo-contacto {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* fin pagina-contacto formulario */
+
+/* pagina - contacto ubicacion */
+.ubicacion{
+  margin-top: 3rem;
+  text-align: center;
+}
+.ubicacion h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 20 px;
+}
+
+.ubicacion p{
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  display:grid;
+  gap: 10rem;
+}
+.ubicacion iframe{
+  display: block;
+  margin: 1rem auto;
+  border-radius: 40px;
+}
+/* fin pagina - contacto ubicacion */
+
+/* preguntas frecuentes tipografia */
+.faq-textos h1{
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  
+}
+.faq-textos p{
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: overline;
+  margin-block-end: 30px;
+}
+
+/* footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 40px;
+  font-size: 14px;
+  font-family: "Urbanist", sans-serif;
+}
+
+.footer span {
+  margin: 5px 10px;
+}
+
+.footer .contenedor-links {
+  text-align: right;
+}
+
+.footer .contenedor-links p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.footer .contenedor-links ul {
+  display: flex;
+  gap: 15px;
+}
+
+.footer .contenedor-links img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+ul li a img:hover{
+  opacity: 0.7;         
+  transform: scale(1.1)
+}
+
+
+/* fin footer */
+
+
+/* responsive mobile */
+@media (max-width: 876px) {
+  header {
+    padding: 0 16px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  .presentacion {
+    padding: 16px;
+  }
+
+  .card-grid {
+    padding: 16px;
+  }
+
+  .card-grid div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-grid img {
+    width: 100%;
+    height: auto;
+    max-width: 520px;
+  }
+
+  .hero-alquileres {
+    min-height: 40vh;
+  }
+
+  .card-alquiler .card-img-top {
+    height: 160px;
+  }
+}
+
+/* fin responsive mobile */
+
+
+/* responsive desktop */
+@media (min-width: 877px) {
+  .galeria-grid {
+    grid-template-columns: 1.1fr 1fr 1fr;
+    grid-template-areas:
+      "titulo-index titulo-index subtitulo"
+      "presentacion item-grid-contenedor-depto-uno item-grid-contenedor-depto-uno"
+      "presentacion item-grid-contenedor-depto-dos item-grid-contenedor-depto-dos"
+      "presentacion item-grid-contenedor-depto-tres item-grid-contenedor-depto-tres";
+    gap: 28px 24px;
+    padding: 32px 40px;
+  }
+
+  .presentacion {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    padding: 20px;
+  }
+
+  .titulo-index {
+    padding: 8px 0;
+  }
+
+  .subtitulo {
+    align-self: end;
+    text-align: right;
+  }
+}
+
+/* fin responsive desktop */
