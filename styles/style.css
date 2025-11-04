@@ -276,42 +276,78 @@ a {
 /* fin pagina-contacto formulario */
 
 /* pagina - contacto ubicacion */
-.ubicacion{
+.ubicacion {
   margin-top: 3rem;
   text-align: center;
 }
+
 .ubicacion h2 {
   font-family: "Poppins", sans-serif;
   text-align: center;
   padding: 20 px;
 }
 
-.ubicacion p{
+.ubicacion p {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  display:grid;
+  display: grid;
   gap: 10rem;
 }
-.ubicacion iframe{
+
+.ubicacion iframe {
   display: block;
   margin: 1rem auto;
   border-radius: 40px;
 }
+
+.btn{
+  background-color: rgb(75,123,167);
+}
+
 /* fin pagina - contacto ubicacion */
 
-/* preguntas frecuentes tipografia */
-.faq-textos h1{
+/* preguntas frecuentes  */
+.faq-textos h1 {
   font-family: "Poppins", sans-serif;
   text-align: center;
-  
+
 }
-.faq-textos p{
-  font-family: "Poppins", sans-serif;
+
+.faq-textos p {
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 18px;
   text-decoration: overline;
   margin-block-end: 30px;
 }
+
+.accordion-item {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* fin preguntas frecuentes  */
+
+/* tipografia sobre nosotros */
+.titulo-sn {
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+  text-align: center;
+  text-decoration:underline;
+  
+}
+
+.subtitulo-sn {
+  font-family: "Poppins", sans-serif;
+margin: 10px;
+padding-top: 15px;
+}
+
+.texto-sn {
+  font-family: "Open Sans", sans-serif;
+
+}
+
+/* tipografia sobre nosotros */
 
 /* footer */
 .footer {
@@ -349,8 +385,9 @@ a {
   height: 24px;
   display: block;
 }
-ul li a img:hover{
-  opacity: 0.7;         
+
+ul li a img:hover {
+  opacity: 0.7;
   transform: scale(1.1)
 }
 
