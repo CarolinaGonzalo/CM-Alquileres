@@ -1,0 +1,19 @@
+@use './typography' as t;
+@use './variables' as v;
+
+.titulo-sn {
+    font-family: v.$font-header;
+    margin: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.subtitulo-sn {
+    font-family: v.$font-header;
+    margin: 10px;
+    padding-top: 15px;
+}
+
+.texto-sn {
+    font-family: v.$font-body;
+}

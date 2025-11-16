@@ -1,0 +1,212 @@
+@use './typography'as t;
+@use './variables'as v;
+
+/*   SECCIÓN: Galería principal  */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 24px;
+    grid-template-areas:
+        "titulo-index"
+        "subtitulo"
+        "presentacion"
+        "item-grid-contenedor-depto-uno"
+        "item-grid-contenedor-depto-dos"
+        "item-grid-contenedor-depto-tres";
+
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.25rem);
+        line-height: 1.15;
+        text-align: center;
+        color: v.$color-texto;
+    }
+
+    h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: clamp(1.1rem, 0.9rem + 1vw, 1.5rem);
+        text-align: center;
+        color: v.$color-texto;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: v.$color-texto;
+    }
+}
+
+.titulo-index,
+.subtitulo,
+.presentacion {
+    padding: 12px 8px;
+}
+
+/*   SECCIÓN: Presentación       */
+.presentacion {
+    background: v.$color-bg;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px v.$color-sombra;
+    padding: 24px;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 12px 36px v.$color-sombra-hover;
+    }
+
+    ul {
+        margin: 1rem 0 1rem 1.5rem;
+        list-style: disc;
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+/*   SECCIÓN: Cards Departamentos*/
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 14px;
+    background: v.$color-bg;
+    box-shadow: 0 10px 28px v.$color-sombra;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px v.$color-sombra-hover;
+    }
+
+    h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        flex: 0 0 auto;
+        box-shadow: 0 4px 16px v.$color-sombra;
+    }
+
+    p {
+        flex: 1 1 320px;
+        min-width: 260px;
+        max-width: 60ch;
+    }
+}
+
+/* Cards de alquiler */
+.card-alquiler {
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 10px 28px $color-sombra;
+    transition: transform .18s ease, box-shadow .18s ease;
+    background: #fff;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px $color-sombra-hover;
+    }
+
+    .card-img-top {
+        height: 180px;
+        object-fit: cover;
+        border-radius: 14px 14px 0 0;
+    }
+
+    .btn-ver-mas {
+        border-radius: 10px;
+        padding: 10px 14px;
+        background-color: $color-primario;
+    }
+}
+
+/*   RESPONSIVE MOBILE           */
+@media (max-width: 876px) {
+    .galeria-grid {
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .presentacion {
+        padding: 16px;
+    }
+
+    .card-grid {
+        padding: 16px;
+
+        div {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 520px;
+        }
+    }
+}
+
+/*   RESPONSIVE DESKTOP          */
+@media (min-width: 877px) {
+    .galeria-grid {
+        grid-template-columns: 1fr 2fr;
+        /* Izquierda = Presentación, Derecha = Cards */
+        grid-template-areas:
+            "titulo-index titulo-index"
+            "subtitulo subtitulo"
+            "presentacion item-grid-contenedor-depto-uno"
+            "presentacion item-grid-contenedor-depto-dos"
+            "presentacion item-grid-contenedor-depto-tres";
+        gap: 28px 24px;
+        padding: 32px 40px;
+    }
+
+    .presentacion {
+        grid-area: presentacion;
+        align-self: start;
+        position: sticky;
+        top: 24px;
+    }
+
+    .item-grid-contenedor-depto-uno {
+        grid-area: item-grid-contenedor-depto-uno;
+    }
+
+    .item-grid-contenedor-depto-dos {
+        grid-area: item-grid-contenedor-depto-dos;
+    }
+
+    .item-grid-contenedor-depto-tres {
+        grid-area: item-grid-contenedor-depto-tres;
+    }
+
+    .titulo-index {
+        grid-area: titulo-index;
+    }
+
+    .subtitulo {
+        grid-area: subtitulo;
+        align-self: end;
+        text-align: right;
+    }
+}

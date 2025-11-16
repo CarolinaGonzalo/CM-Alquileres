@@ -1,0 +1,13 @@
+@use "variables" as v;
+@use "reset" as r;
+@use "typography" as t;
+
+/* Header */
+.navbar-brand img {
+    height: 48px;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 600;
+    color: v.$color-texto;
+}

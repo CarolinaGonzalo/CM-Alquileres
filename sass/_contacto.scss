@@ -1,0 +1,33 @@
+@use './typography' as t;
+@use './variables' as v;
+
+.titulo-contacto {
+    font-family: v.$font-header;
+    text-align: center;
+}
+
+.ubicacion {
+    margin-top: 3rem;
+    text-align: center;
+
+    h2 {
+        font-family: v.$font-header;
+        padding: 20px;
+    }
+
+    p {
+        font-family: v.$font-body;
+        display: grid;
+        gap: 10rem;
+    }
+
+    iframe {
+        display: block;
+        margin: 1rem auto;
+        border-radius: 40px;
+    }
+}
+
+.btn {
+    background-color: v.$color-primario;
+}

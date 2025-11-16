@@ -1,0 +1,52 @@
+/* Fuentes externas */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/* Variables globales */
+$color-texto: #111;
+$color-bg: #fafafa;
+$color-primario: rgb(75, 123, 167);
+$color-sombra: rgba(0, 0, 0, 0.08);
+$color-sombra-hover: rgba(0, 0, 0, 0.12);
+
+/* Tipografías */
+$font-header: "Poppins",
+sans-serif;
+$font-body: "Open Sans",
+sans-serif;
+$font-footer: "Urbanist",
+sans-serif;
+
+
+/* Tipografía general */
+body {
+    color: $color-texto;
+    background: $color-bg;
+    font-family: $font-body;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}

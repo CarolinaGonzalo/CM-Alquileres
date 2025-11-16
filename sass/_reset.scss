@@ -1,0 +1,29 @@
+@use './typography' as t;
+@use './variables' as v;
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  color: v.$color-texto;
+  background: v.$color-bg;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: v.$color-texto;
+  text-decoration: none;
+}
