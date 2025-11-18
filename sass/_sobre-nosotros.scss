@@ -1,6 +1,23 @@
 @use './typography' as t;
 @use './variables' as v;
 
+// .titulo-sn {
+//     font-family: v.$font-header;
+//     margin: 10px;
+//     text-align: center;
+//     text-decoration: underline;
+// }
+
+// .subtitulo-sn {
+//     font-family: v.$font-header;
+//     margin: 10px;
+//     padding-top: 15px;
+// }
+
+// .texto-sn {
+//     font-family: v.$font-body;
+// }
+
 .titulo-sn {
     font-family: v.$font-header;
     margin: 10px;
@@ -16,4 +33,48 @@
 
 .texto-sn {
     font-family: v.$font-body;
+}
+
+
+/* RESPONSIVE TABLET */
+@media (max-width: 768px) {
+    .titulo-sn {
+        font-size: 1.6rem;
+        margin: 8px;
+    }
+
+    .subtitulo-sn {
+        font-size: 1.3rem;
+        margin: 8px;
+        padding-top: 12px;
+    }
+
+    .texto-sn {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+}
+
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 480px) {
+    .titulo-sn {
+        font-size: 1.4rem;
+        margin: 6px;
+        line-height: 1.2;
+    }
+
+    .subtitulo-sn {
+        font-size: 1.2rem;
+        margin: 6px;
+        padding-top: 10px;
+    }
+
+    .texto-sn {
+        font-size: 0.95rem;
+        line-height: 1.45;
+        padding: 0 12px;
+        text-align: justify; 
+    }
 }

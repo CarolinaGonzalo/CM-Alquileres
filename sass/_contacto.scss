@@ -1,5 +1,5 @@
-@use './typography' as t;
-@use './variables' as v;
+@use './typography'as t;
+@use './variables'as v;
 
 .titulo-contacto {
     font-family: v.$font-header;
@@ -30,4 +30,57 @@
 
 .btn {
     background-color: v.$color-primario;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 768px) {
+    .ubicacion {
+        margin-top: 2rem;
+
+        p {
+            gap: 4rem;
+            font-size: 1rem;
+        }
+
+        h2 {
+            padding: 16px;
+            font-size: 1.4rem;
+        }
+
+        iframe {
+            max-width: 500px;
+            height: 300px;
+            border-radius: 30px;
+        }
+    }
+}
+
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 480px) {
+    .ubicacion {
+        margin-top: 1.5rem;
+
+        p {
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        h2 {
+            padding: 12px;
+            font-size: 1.2rem;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: 240px;
+            border-radius: 20px;
+        }
+    }
+
+    .titulo-contacto {
+        font-size: 1.4rem;
+        padding: 0 12px;
+    }
 }

@@ -117,13 +117,13 @@
 .card-alquiler {
     border: 0;
     border-radius: 14px;
-    box-shadow: 0 10px 28px $color-sombra;
+    box-shadow: 0 10px 28px v.$color-sombra;
     transition: transform .18s ease, box-shadow .18s ease;
     background: #fff;
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 16px 36px $color-sombra-hover;
+        box-shadow: 0 16px 36px v.$color-sombra-hover;
     }
 
     .card-img-top {
@@ -131,16 +131,16 @@
         object-fit: cover;
         border-radius: 14px 14px 0 0;
     }
-    
+
 
     .btn-ver-mas {
         border-radius: 10px;
         padding: 10px 14px;
-        background-color: $color-primario;
+        background-color: v.$color-primario;
     }
 }
 
-/*   RESPONSIVE MOBILE           */
+/* RESPONSIVE MOBILE */
 @media (max-width: 876px) {
     .galeria-grid {
         padding: 16px;
@@ -167,11 +167,10 @@
     }
 }
 
-/*   RESPONSIVE DESKTOP          */
-@media (min-width: 877px) {
+/* RESPONSIVE TABLET */
+@media (min-width: 768px) {
     .galeria-grid {
         grid-template-columns: 1fr 2fr;
-        /* Izquierda = Presentación, Derecha = Cards */
         grid-template-areas:
             "titulo-index titulo-index"
             "subtitulo subtitulo"
@@ -209,5 +208,55 @@
         grid-area: subtitulo;
         align-self: end;
         text-align: right;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 480px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo-index"
+            "subtitulo"
+            "presentacion"
+            "item-grid-contenedor-depto-uno"
+            "item-grid-contenedor-depto-dos"
+            "item-grid-contenedor-depto-tres";
+
+        gap: 16px;
+        padding: 16px 12px;
+    }
+
+    .titulo-index {
+        grid-area: titulo-index;
+        text-align: center;
+        padding: 6px 4px;
+    }
+
+    .subtitulo {
+        grid-area: subtitulo;
+        text-align: center !important;
+        padding: 6px 4px;
+        align-self: center;
+    }
+
+    .presentacion {
+        grid-area: presentacion;
+        padding: 16px;
+        border-radius: 10px;
+        position: static; 
+    }
+
+    .item-grid-contenedor-depto-uno {
+        grid-area: item-grid-contenedor-depto-uno;
+    }
+
+    .item-grid-contenedor-depto-dos {
+        grid-area: item-grid-contenedor-depto-dos;
+    }
+
+    .item-grid-contenedor-depto-tres {
+        grid-area: item-grid-contenedor-depto-tres;
     }
 }
