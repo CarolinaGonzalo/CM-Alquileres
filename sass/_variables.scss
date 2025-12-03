@@ -9,6 +9,10 @@ $color-primario: rgb(75, 123, 167);
 $color-sombra: rgba(0, 0, 0, 0.08);
 $color-sombra-hover: rgba(0, 0, 0, 0.12);
 
+// Tonos derivados
+$color-primario-light: lighten($color-primario, 35%);
+$color-primario-dark: darken($color-primario, 15%);
+
 /* Tipografías */
 $font-header: "Poppins",
 sans-serif;
@@ -33,6 +37,13 @@ a {
 ul {
     list-style: none;
 }
+// DIMENSIONES / SIZES
+$max-width: 1120px; 
+$radius: 12px;
+$radius-big: 20px;
+
+$shadow-soft: 0px 10px 25px rgba(0, 0, 0, 0.06);
+$shadow-hard: 0px 4px 14px rgba(0, 0, 0, 0.12);
 
 /* Reset básico */
 * {
